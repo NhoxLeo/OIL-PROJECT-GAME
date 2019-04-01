@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<LogFileModel xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <LogFileName>6a53bcc8-43c1-499c-aee6-f9e541b10f29Log.xml</LogFileName>
+  <TotalGameSessions>1</TotalGameSessions>
+  <Log>
+    <GameSessionModel>
+      <StageChangeLogs />
+      <RegularIntervalLogs />
+      <PlayerName>6a53bcc8-43c1-499c-aee6-f9e541b10f29</PlayerName>
+      <TotalCheckPoints>0</TotalCheckPoints>
+      <SessionNumber>0</SessionNumber>
+      <SessionDate>2018-12-19</SessionDate>
+    </GameSessionModel>
+  </Log>
+</LogFileModel>
