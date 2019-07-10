@@ -26,8 +26,8 @@ public abstract class AGameEvent : MonoBehaviour
         resourceManager = GameObject.Find("ResourceManager").gameObject.GetComponent<ResourceManager>();
         resources = resourceManager.GetResourceValues();
         popMan = GameObject.Find("Population").gameObject;
-        baseBoostValue = 10 * EventAIState.WorldEventDifficultyLevel;
-        baseDeltaValue = 10 * EventAIState.WorldEventDifficultyLevel;
+     //   baseBoostValue = 10 * EventAIState.WorldEventDifficultyLevel;
+       // baseDeltaValue = 10 * EventAIState.WorldEventDifficultyLevel;
         baseBuffDuration = 90; 
        // EventShowDuration = 10 / EventAIState.WorldEventDifficultyLevel;
         resources = resourceManager.GetResourceValues();

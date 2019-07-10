@@ -24,7 +24,7 @@ public class TechFood : Tech {
                 case 2:
                     foreach (GameObject building in buildingManager.GetComponent<BuildingManager>().GetBuildingsOfType("BuildingCanteen"))
                         building.GetComponent<BuildingProduction>().ManipulateResourceMultiplier(0.1f);
-                    UpgradeManager.CanteenRate += 0.1f;
+                    UpgradeManager.CanteenRate += 2f;
                     break;
                 case 3:
                     foreach (GameObject building in buildingManager.GetComponent<BuildingManager>().GetBuildingsOfType("BuildingCanteen"))

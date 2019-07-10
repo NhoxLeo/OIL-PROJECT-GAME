@@ -166,7 +166,7 @@ public class PopulationManager : MonoBehaviour
                         {
                             if (currentlySelectedBuilding.GetComponent<BuildingProduction>().AddWorker(human))
                             {
-                                human.GetComponent<HumanStateMachine>().ChangeWorkState(currentlySelectedBuilding);
+                             //   human.GetComponent<HumanStateMachine>().ChangeWorkState(currentlySelectedBuilding); // TEST
                                 currentlySelectedBuilding.GetComponent<Building>().SetInformationText(GameObject.Find("BuildingInfo").gameObject);
                             }
                         }
@@ -174,7 +174,7 @@ public class PopulationManager : MonoBehaviour
                         {  // If spaceship
                             if (currentlySelectedBuilding.GetComponent<BuildingSpaceShip>().AddScientist(human))
                             {
-                                human.GetComponent<HumanStateMachine>().ChangeWorkState(currentlySelectedBuilding);
+                              //  human.GetComponent<HumanStateMachine>().ChangeWorkState(currentlySelectedBuilding); // TEST
                                 currentlySelectedBuilding.GetComponent<Building>().SetInformationText(GameObject.Find("BuildingInfo").gameObject);
                             }
                         }
@@ -196,7 +196,7 @@ public class PopulationManager : MonoBehaviour
                         try
                         {   // If spaceship
                             GameObject tempWorker = currentlySelectedBuilding.GetComponent<BuildingSpaceShip>().RemoveScientist();
-                            tempWorker.GetComponent<HumanStateMachine>().ChangeWorkState(null);
+                         //   tempWorker.GetComponent<HumanStateMachine>().ChangeWorkState(null); // TEST
                         }
                         catch { }
                     }
@@ -216,9 +216,15 @@ public class PopulationManager : MonoBehaviour
 
                 if (tempUnemployedPerson != null)
                 {
-                    if (currentlySelectedBuilding.GetComponent<BuildingProduction>().AddWorker(tempUnemployedPerson))
+                    if (currentlySelectedBuilding.GetComponent<BuildingProduction>().AddWorker(tempUnemployedPerson)) //thesis GOAP primary goal
                     {
-                        tempUnemployedPerson.GetComponent<HumanStateMachine>().ChangeWorkState(currentlySelectedBuilding);
+                        //thesis
+                        //----------------------------------------------------------------
+                        //make call for GOAP -> find action sequence for human to complete assignemnt                      
+                        tempUnemployedPerson.GetComponent<Human>().HasJob = true;
+                        tempUnemployedPerson.GetComponent<Human>().OccupationBuilding = currentlySelectedBuilding;
+                        tempUnemployedPerson.GetComponent<Human>().ChangeOccupationBuilding(currentlySelectedBuilding); //TEST
+                        //tempUnemployedPerson.GetComponent<HumanStateMachine>().ChangeWorkState(currentlySelectedBuilding); //TEST
                         currentlySelectedBuilding.GetComponent<Building>().SetInformationText(GameObject.Find("BuildingInfo").gameObject);
                     }
                 }
@@ -228,8 +234,8 @@ public class PopulationManager : MonoBehaviour
                 try
                 {
                     currentlySelectedBuilding.GetComponent<BuildingProduction>().RemoveWorkers();
-                    //GameObject tempWorker = currentlySelectedBuilding.GetComponent<BuildingProduction>().RemoveWorkers();
-                    //tempWorker.GetComponent<HumanStateMachine>().ChangeWorkState(null);
+                  //  GameObject tempWorker = currentlySelectedBuilding.GetComponent<BuildingProduction>().RemoveWorkers();
+                   // tempWorker.GetComponent<HumanStateMachine>().ChangeWorkState(null);
                 }
                 catch { }
             }
@@ -258,7 +264,12 @@ public class PopulationManager : MonoBehaviour
         {
             if (currentlySelectedBuilding.GetComponent<BuildingProduction>().AddWorker(tempUnemployedPerson))
             {
-                tempUnemployedPerson.GetComponent<HumanStateMachine>().ChangeWorkState(currentlySelectedBuilding);
+                //thesis
+                //----------------------------------------------------------------
+                //make call for GOAP -> find action sequence for human to complete assignemnt
+              //  tempUnemployedPerson.GetComponent<Human>().OccupationBuilding = currentlySelectedBuilding;
+              //  tempUnemployedPerson.GetComponent<Human>().ChangeOccupationBuilding(currentlySelectedBuilding);
+              //  //tempUnemployedPerson.GetComponent<HumanStateMachine>().ChangeWorkState(currentlySelectedBuilding);
                 currentlySelectedBuilding.GetComponent<Building>().SetInformationText(GameObject.Find("BuildingInfo").gameObject);
             }
         }
@@ -271,6 +282,7 @@ public class PopulationManager : MonoBehaviour
         try
         {
             currentlySelectedBuilding.GetComponent<BuildingProduction>().RemoveWorkers(workSiteType);
+           
         }
         catch { }
         currentlySelectedBuilding.GetComponent<Building>().SetInformationText(GameObject.Find("BuildingInfo").gameObject);
@@ -329,7 +341,7 @@ public class PopulationManager : MonoBehaviour
                 {
                     if (currentlySelectedBuilding.GetComponent<BuildingSchool>().AssignPupil(tempChild))
                     {
-                        tempChild.GetComponent<HumanStateMachine>().ChangeWorkState(currentlySelectedBuilding);
+                     //   tempChild.GetComponent<HumanStateMachine>().ChangeWorkState(currentlySelectedBuilding); // TEST
                     }
                 }
             }
@@ -353,7 +365,7 @@ public class PopulationManager : MonoBehaviour
                 {
                     if (currentlySelectedBuilding.GetComponent<BuildingAcademy>().AssignStudent(student))
                     {
-                        student.GetComponent<HumanStateMachine>().ChangeWorkState(currentlySelectedBuilding);
+                      //  student.GetComponent<HumanStateMachine>().ChangeWorkState(currentlySelectedBuilding); // TEST
                     }
                 }
             }

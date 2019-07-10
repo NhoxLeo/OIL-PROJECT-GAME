@@ -100,7 +100,7 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.2
     agentHeight: 2
-    agentSlope: 30.5
+    agentSlope: 30.9
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
@@ -228,8 +228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Allows us to build a Knick-knack Store where people can buy trinkets
-    and other moral-boosting items for personal use.
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &16526921
@@ -1358,7 +1357,7 @@ GameObject:
   - component: {fileID: 88028761}
   - component: {fileID: 88028763}
   - component: {fileID: 88028762}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: holder_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1555,10 +1554,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bc08feae4b833c448af4b0c535f0bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingPrefab: {fileID: 1984166634035680, guid: aeb96fbf0bb5e2a42b30f23b823e93f7,
-    type: 2}
-  buildingName: Academy
-  tooltipText: Academy for educating specialists
+  buildingPrefab: {fileID: 0}
+  buildingName: 
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &89401456
@@ -2068,8 +2066,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 147.625, y: -115}
-  m_SizeDelta: {x: 51.050003, y: 230}
+  m_AnchoredPosition: {x: 195, y: -115}
+  m_SizeDelta: {x: 70, y: 230}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &108645744
 MonoBehaviour:
@@ -2085,10 +2083,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingManager: {fileID: 365456831}
   tooltip: 
-  RowButtons:
-  - {fileID: 2109238002}
-  - {fileID: 866689243}
-  - {fileID: 2101842913}
+  RowButtons: []
 --- !u!114 &108645745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3167,8 +3162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Upgrades the shoes of the population, allowing the people to walk faster
-    without sore feet.
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &133982264
@@ -4042,7 +4036,7 @@ GameObject:
   - component: {fileID: 183768923}
   - component: {fileID: 183768925}
   - component: {fileID: 183768924}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8918,7 +8912,7 @@ Transform:
   m_Children:
   - {fileID: 572603466}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &194265684
 MonoBehaviour:
@@ -9545,9 +9539,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: 'Moral: 666'
+  tooltipText: 
   isTechtip: 0
-  isSmallBox: 1
+  isSmallBox: 0
 --- !u!114 &219938417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9926,8 +9920,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 25.525002, y: -195}
-  m_SizeDelta: {x: 51.050003, y: 70}
+  m_AnchoredPosition: {x: 35, y: -195}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &244621815
 MonoBehaviour:
@@ -9943,7 +9937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Allows us to upgrade our Sawmills in order to produce more wood.
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &244621816
@@ -10047,8 +10041,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4077301cf8174ff4dad6f13b0a443beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoolDownSprite: {fileID: 21300000, guid: 979a2fa59bb632a459a9ac4a5228ac38, type: 3}
-  OriginalSprite: {fileID: 21300000, guid: 784d2475bdbe33248865dcac564dfaf4, type: 3}
+  CoolDownSprite: {fileID: 0}
+  OriginalSprite: {fileID: 0}
 --- !u!1 &246932876
 GameObject:
   m_ObjectHideFlags: 0
@@ -10624,8 +10618,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 25.525002, y: -195}
-  m_SizeDelta: {x: 51.050003, y: 70}
+  m_AnchoredPosition: {x: 35, y: -195}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &286032418
 MonoBehaviour:
@@ -10641,8 +10635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Gives us the option to produce better food, requiring more raw materials.
-    Better food, however, increases the moral of the population.
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &286032419
@@ -10746,8 +10739,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4077301cf8174ff4dad6f13b0a443beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoolDownSprite: {fileID: 21300000, guid: 979a2fa59bb632a459a9ac4a5228ac38, type: 3}
-  OriginalSprite: {fileID: 21300000, guid: 784d2475bdbe33248865dcac564dfaf4, type: 3}
+  CoolDownSprite: {fileID: 0}
+  OriginalSprite: {fileID: 0}
 --- !u!1001 &287060208
 Prefab:
   m_ObjectHideFlags: 0
@@ -11283,9 +11276,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be5ac6a1d61105345ac4a9dfee8d18c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 1693481766}
-  em: {fileID: 814911358}
-  decisionTimer: 30
+  slider: {fileID: 0}
+  em: {fileID: 0}
+  decisionTimer: 0
 --- !u!114 &301623676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12452,7 +12445,7 @@ GameObject:
   - component: {fileID: 365456833}
   - component: {fileID: 365456834}
   - component: {fileID: 365456832}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Buildings
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -12487,7 +12480,7 @@ Transform:
   - {fileID: 62080727}
   - {fileID: 827707112}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &365456834
 MonoBehaviour:
@@ -13117,8 +13110,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Open to see event
-  isTechtip: 0
+  tooltipText: 
+  isTechtip: 1
   isSmallBox: 0
 --- !u!114 &413759138
 MonoBehaviour:
@@ -13132,7 +13125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6358830e9c19432468b10c0342853e48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 413759140}
+  button: {fileID: 0}
 --- !u!114 &413759139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13145,9 +13138,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84459c1deacd2874f815d82f6520ae67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 301623674}
-  ps: {fileID: 1279530180}
-  button: {fileID: 413759134}
+  panel: {fileID: 0}
+  ps: {fileID: 0}
+  button: {fileID: 0}
 --- !u!114 &413759140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13259,8 +13252,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cc13517f2b32b44da59baff3057b77c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  em: {fileID: 814911358}
-  timeUntilAutoChoose: 6
+  em: {fileID: 0}
+  timeUntilAutoChoose: 15
 --- !u!1 &417824678
 GameObject:
   m_ObjectHideFlags: 0
@@ -13413,8 +13406,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 76.80002, y: -22.4086}
-  m_SizeDelta: {x: 143.60004, y: 34.8172}
+  m_AnchoredPosition: {x: 76.80002, y: -22.29507}
+  m_SizeDelta: {x: 143.60004, y: 34.59014}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &425843531
 MonoBehaviour:
@@ -13436,7 +13429,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.801486, b: 0, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -13454,33 +13447,11 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 425843532}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 365456832}
-        m_MethodName: SetCurrentlySelectedBuilding
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 572603467}
-        m_MethodName: DeselectCurrentSelection
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   HoverSoundID: 
-  ClickSoundID: beepOpen
+  ClickSoundID: 
 --- !u!114 &425843532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13712,7 +13683,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4428458632831480, guid: 9a1feb0190ae086429b1b3f4082b4ee6, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a1feb0190ae086429b1b3f4082b4ee6, type: 2}
@@ -14581,7 +14552,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &472312063
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15003,9 +14974,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Homeless
-  isTechtip: 0
-  isSmallBox: 1
+  tooltipText: 
+  isTechtip: 1
+  isSmallBox: 0
 --- !u!114 &495798029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16095,7 +16066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d5fa2f8c727dd34a9051412ff6b7079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 1693481767}
+  slider: {fileID: 0}
 --- !u!1 &536074684
 GameObject:
   m_ObjectHideFlags: 0
@@ -16718,8 +16689,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingList: {fileID: 365456831}
-  propList: {fileID: 0}
-  HighlightBuildingColor: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0.83137256}
+  propList: {fileID: 646586044}
+  HighlightBuildingColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!81 &572603468
 AudioListener:
   m_ObjectHideFlags: 0
@@ -16737,8 +16708,8 @@ Camera:
   m_GameObject: {fileID: 572603465}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -16764,7 +16735,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
+  m_AllowDynamicResolution: 1
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -16880,8 +16851,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 25.525002, y: -35}
-  m_SizeDelta: {x: 51.050003, y: 70}
+  m_AnchoredPosition: {x: 35, y: -35}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &582345508
 MonoBehaviour:
@@ -16897,7 +16868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Allows the steel collectors to carry more steel.
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &582345509
@@ -17386,7 +17357,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Build academy for educate specialists
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &598237421
@@ -17889,7 +17860,7 @@ Transform:
   - {fileID: 1846529203}
   - {fileID: 381321738}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &614862533
 GameObject:
@@ -18774,8 +18745,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Better design and more raw materials allow us to build better homes
-    that protect the inhabitants from the environment much better.
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &642474805
@@ -18948,7 +18918,7 @@ Transform:
   - {fileID: 1670190829}
   - {fileID: 380888267}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &646586046
 MonoBehaviour:
@@ -19097,7 +19067,7 @@ GameObject:
   - component: {fileID: 663653068}
   - component: {fileID: 663653067}
   - component: {fileID: 663653066}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BuildingOilProduction
   m_TagString: BuildingProduction
   m_Icon: {fileID: 0}
@@ -19529,7 +19499,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4154803236522888, guid: 16bab6afe1abccc47af9008174806a3a, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 114211416500667886, guid: 16bab6afe1abccc47af9008174806a3a,
         type: 2}
@@ -19579,7 +19549,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 4}
-  m_AnchoredPosition: {x: 0, y: -479.89758}
+  m_AnchoredPosition: {x: 0, y: -41.085007}
   m_SizeDelta: {x: 0, y: 0.000061035156}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &694169497
@@ -19623,7 +19593,7 @@ GameObject:
   m_Component:
   - component: {fileID: 701953256}
   - component: {fileID: 701953257}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BuildingIdle
   m_TagString: BuildingAlwaysWorking
   m_Icon: {fileID: 0}
@@ -19730,7 +19700,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &716829264
 GameObject:
@@ -19894,29 +19864,18 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 727551335}
+  m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 365456832}
-        m_MethodName: UpgradeBuilding
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   HoverSoundID: 
   ClickSoundID: 
-  ResourceManager: {fileID: 1737036564}
-  PlayerInteraction: {fileID: 572603465}
-  BuildingManager: {fileID: 365456831}
-  DisabledToolTip: Requires more research
+  ResourceManager: {fileID: 0}
+  PlayerInteraction: {fileID: 0}
+  BuildingManager: {fileID: 0}
+  DisabledToolTip: 
 --- !u!114 &727551335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20005,8 +19964,8 @@ RectTransform:
   m_Father: {fileID: 41303933}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.63969845}
-  m_AnchorMax: {x: 1, y: 0.8896984}
+  m_AnchorMin: {x: 0, y: 0.055082656}
+  m_AnchorMax: {x: 1, y: 0.30508262}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -20170,9 +20129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8ea54886ab2cc84c93f303dc5a15863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyTime: 4
-  floatingTextPrefab: {fileID: 1957351870757448, guid: e7a60fbd64946244a925ba7eb0e6beac,
-    type: 2}
+  destroyTime: 3
+  floatingTextPrefab: {fileID: 0}
 --- !u!1 &739218804
 GameObject:
   m_ObjectHideFlags: 0
@@ -20374,7 +20332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d5fa2f8c727dd34a9051412ff6b7079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 1693481767}
+  slider: {fileID: 0}
 --- !u!1 &749650031
 GameObject:
   m_ObjectHideFlags: 0
@@ -20411,8 +20369,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 76.80002, y: -59.2258}
-  m_SizeDelta: {x: 143.60004, y: 34.8172}
+  m_AnchoredPosition: {x: 76.80002, y: -58.885212}
+  m_SizeDelta: {x: 143.60004, y: 34.59014}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &749650033
 MonoBehaviour:
@@ -20434,7 +20392,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.801486, b: 0, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -20455,8 +20413,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  HoverSoundID: buildingHover
-  ClickSoundID: ClickSound
+  HoverSoundID: 
+  ClickSoundID: 
 --- !u!114 &749650034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20545,7 +20503,7 @@ GameObject:
   - component: {fileID: 757137333}
   m_Layer: 5
   m_Name: ButtonWaterWell
-  m_TagString: Untagged
+  m_TagString: UIBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20586,8 +20544,7 @@ MonoBehaviour:
   buildingPrefab: {fileID: 1243712409855752, guid: 6b1d69288fe2ddf46a115ef305b669d1,
     type: 2}
   buildingName: Water Well
-  tooltipText: <i>A Water Well allows our workers to collect unclean water from an
-    underground water vein.</i>
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &757137334
@@ -21161,8 +21118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Stronger and more robust arm allows our Oil Rig to collect oil even
-    faster.  Increases its productivity.
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &775273419
@@ -21279,7 +21235,7 @@ GameObject:
   - component: {fileID: 780429286}
   - component: {fileID: 780429288}
   - component: {fileID: 780429287}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21808,25 +21764,24 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 814911356}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3c0518a8843d39478dee67c26d98811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  choiceA: {fileID: 464955495}
-  choiceB: {fileID: 1291296551}
-  choiceC: {fileID: 1577052101}
-  panelA: {fileID: 944167914}
-  panelB: {fileID: 743640703}
-  panelC: {fileID: 534072520}
-  notificationButtonObj: {fileID: 413759134}
-  panelText: {fileID: 310390462}
-  buttonAContext: {fileID: 791086714}
-  buttonBContext: {fileID: 1615891519}
-  buttonCContext: {fileID: 507887281}
-  panelObject: {fileID: 301623674}
-  floatingText: {fileID: 114809960365625720, guid: e7a60fbd64946244a925ba7eb0e6beac,
-    type: 2}
+  choiceA: {fileID: 0}
+  choiceB: {fileID: 0}
+  choiceC: {fileID: 0}
+  panelA: {fileID: 0}
+  panelB: {fileID: 0}
+  panelC: {fileID: 0}
+  notificationButtonObj: {fileID: 0}
+  panelText: {fileID: 0}
+  buttonAContext: {fileID: 0}
+  buttonBContext: {fileID: 0}
+  buttonCContext: {fileID: 0}
+  panelObject: {fileID: 0}
+  floatingText: {fileID: 0}
 --- !u!4 &814911359
 Transform:
   m_ObjectHideFlags: 0
@@ -21838,7 +21793,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &823711670
 GameObject:
@@ -21929,7 +21884,7 @@ GameObject:
   - component: {fileID: 827707109}
   - component: {fileID: 827707108}
   - component: {fileID: 248709128}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BuildingSpaceShip
   m_TagString: BuildingSpaceShip
   m_Icon: {fileID: 0}
@@ -22459,7 +22414,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &847260285
 GameObject:
@@ -22646,8 +22601,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 25.525002, y: -115}
-  m_SizeDelta: {x: 51.050003, y: 70}
+  m_AnchoredPosition: {x: 35, y: -115}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &866689245
 MonoBehaviour:
@@ -22663,8 +22618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Enables the Advanced Water Well where water is produced from underground
-    water veins over time as long as workers are present. Requires oil to operate.
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &866689246
@@ -22768,8 +22722,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4077301cf8174ff4dad6f13b0a443beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoolDownSprite: {fileID: 21300000, guid: 979a2fa59bb632a459a9ac4a5228ac38, type: 3}
-  OriginalSprite: {fileID: 21300000, guid: 784d2475bdbe33248865dcac564dfaf4, type: 3}
+  CoolDownSprite: {fileID: 0}
+  OriginalSprite: {fileID: 0}
 --- !u!1 &869152709
 GameObject:
   m_ObjectHideFlags: 0
@@ -22808,8 +22762,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 25.525002, y: -115}
-  m_SizeDelta: {x: 51.050003, y: 70}
+  m_AnchoredPosition: {x: 35, y: -115}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &869152711
 MonoBehaviour:
@@ -22825,8 +22779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Enables the Steel Refinery where steel is produced over time as long
-    as workers are present. Requires oil to operate.
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &869152712
@@ -22930,8 +22883,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4077301cf8174ff4dad6f13b0a443beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoolDownSprite: {fileID: 21300000, guid: 979a2fa59bb632a459a9ac4a5228ac38, type: 3}
-  OriginalSprite: {fileID: 21300000, guid: 784d2475bdbe33248865dcac564dfaf4, type: 3}
+  CoolDownSprite: {fileID: 0}
+  OriginalSprite: {fileID: 0}
 --- !u!1 &872473816
 GameObject:
   m_ObjectHideFlags: 0
@@ -22985,11 +22938,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a66b74fd2dbb4429dd3fc153767493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingManager: {fileID: 0}
+  buildingManager: {fileID: 365456831}
   tooltip: 
-  RowButtons:
-  - {fileID: 1442867790}
-  - {fileID: 642474802}
+  RowButtons: []
   barButton: {fileID: 1526330541}
 --- !u!114 &872473819
 MonoBehaviour:
@@ -23282,11 +23233,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 883301424}
   m_CullTransparentMesh: 0
---- !u!1 &890738427 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1527840926657380, guid: 9a1feb0190ae086429b1b3f4082b4ee6,
-    type: 2}
-  m_PrefabInternal: {fileID: 438991705}
 --- !u!1 &895312183
 GameObject:
   m_ObjectHideFlags: 0
@@ -23340,11 +23286,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bc08feae4b833c448af4b0c535f0bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingPrefab: {fileID: 1984166634035680, guid: 0537dacb67a350c4ea332bf138fa25d6,
-    type: 2}
-  buildingName: School
-  tooltipText: A place for children to get educated, allowing them to perform more
-    complex tasks as adults. Requires oil to operate.
+  buildingPrefab: {fileID: 0}
+  buildingName: 
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &895312186
@@ -23825,11 +23769,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bc08feae4b833c448af4b0c535f0bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingPrefab: {fileID: 1984166634035680, guid: 31073ec24f37e31408dc0584960b92cb,
-    type: 2}
-  buildingName: Sawmill
-  tooltipText: The Sawmill produces wood over time as long as it has any active workers.
-    Requires oil to operate.
+  buildingPrefab: {fileID: 0}
+  buildingName: 
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &927658986
@@ -24149,10 +24091,56 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4952855615582222, guid: 4b44bc7ae31aa674d84d7b0d476b6b8f, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b44bc7ae31aa674d84d7b0d476b6b8f, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &937064793
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4691660314108092, guid: bb253fffac8c8454580d0f9c69683ae9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 34.11272
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691660314108092, guid: bb253fffac8c8454580d0f9c69683ae9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.00000047683716
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691660314108092, guid: bb253fffac8c8454580d0f9c69683ae9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 44.369392
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691660314108092, guid: bb253fffac8c8454580d0f9c69683ae9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691660314108092, guid: bb253fffac8c8454580d0f9c69683ae9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691660314108092, guid: bb253fffac8c8454580d0f9c69683ae9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691660314108092, guid: bb253fffac8c8454580d0f9c69683ae9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691660314108092, guid: bb253fffac8c8454580d0f9c69683ae9, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851800495014510, guid: bb253fffac8c8454580d0f9c69683ae9, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bb253fffac8c8454580d0f9c69683ae9, type: 2}
   m_IsPrefabAsset: 0
 --- !u!114 &937883499
 MonoBehaviour:
@@ -24325,7 +24313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d5fa2f8c727dd34a9051412ff6b7079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 1693481767}
+  slider: {fileID: 0}
 --- !u!1 &945888863
 GameObject:
   m_ObjectHideFlags: 0
@@ -24509,9 +24497,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Unemployed
-  isTechtip: 0
-  isSmallBox: 1
+  tooltipText: 
+  isTechtip: 1
+  isSmallBox: 0
 --- !u!114 &946581865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24853,11 +24841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingManager: {fileID: 365456831}
   tooltip: 
-  RowButtons:
-  - {fileID: 1098384407}
-  - {fileID: 1519891730}
-  - {fileID: 1161441522}
-  - {fileID: 598237418}
+  RowButtons: []
   schoolButton: {fileID: 895312183}
   academyButton: {fileID: 89401453}
 --- !u!114 &976719121
@@ -25424,6 +25408,11 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1012856147}
   m_CullTransparentMesh: 0
+--- !u!1 &1014583072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1527840926657380, guid: 9a1feb0190ae086429b1b3f4082b4ee6,
+    type: 2}
+  m_PrefabInternal: {fileID: 438991705}
 --- !u!1 &1017200156
 GameObject:
   m_ObjectHideFlags: 0
@@ -25559,8 +25548,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Better methods allow our Oil Rig to reach greater depth in order to
-    find oil. Increases its productivity.
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &1018675076
@@ -25953,7 +25941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1372413232}
-  mm: {fileID: 890738427}
+  mm: {fileID: 1014583072}
   userFeedback: {fileID: 1150622165}
 --- !u!1 &1044290102
 GameObject:
@@ -26111,8 +26099,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 25.525002, y: -115}
-  m_SizeDelta: {x: 51.050003, y: 70}
+  m_AnchoredPosition: {x: 35, y: -115}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1056770637
 MonoBehaviour:
@@ -26128,8 +26116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Allows us to upgrade our canteens in order to produce more food and
-    water from less raw materials.
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &1056770638
@@ -26233,8 +26220,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4077301cf8174ff4dad6f13b0a443beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoolDownSprite: {fileID: 21300000, guid: 979a2fa59bb632a459a9ac4a5228ac38, type: 3}
-  OriginalSprite: {fileID: 21300000, guid: 784d2475bdbe33248865dcac564dfaf4, type: 3}
+  CoolDownSprite: {fileID: 0}
+  OriginalSprite: {fileID: 0}
 --- !u!1 &1061428541
 GameObject:
   m_ObjectHideFlags: 0
@@ -26847,8 +26834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Allows us to build schools in order to educate children and prepare
-    them for more complex tasks as adults.
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &1098384410
@@ -27185,8 +27171,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 208.67502, y: -115}
-  m_SizeDelta: {x: 51.050003, y: 230}
+  m_AnchoredPosition: {x: 275, y: -115}
+  m_SizeDelta: {x: 70, y: 230}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1116376038
 MonoBehaviour:
@@ -27202,10 +27188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingManager: {fileID: 365456831}
   tooltip: 
-  RowButtons:
-  - {fileID: 1231172306}
-  - {fileID: 1056770635}
-  - {fileID: 286032416}
+  RowButtons: []
 --- !u!114 &1116376039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27318,11 +27301,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bc08feae4b833c448af4b0c535f0bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingPrefab: {fileID: 1596386078045332, guid: 9d7404c9d6fbfa54a85fed480948faf3,
-    type: 2}
-  buildingName: Knick-knack Store
-  tooltipText: A shop where people can buy trinkets and other personal items that
-    increases the moral.
+  buildingPrefab: {fileID: 0}
+  buildingName: 
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &1120748567
@@ -27452,7 +27433,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4293356950621074, guid: cd1799732a7851042b0cb060b4d8d432, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114277591708000690, guid: cd1799732a7851042b0cb060b4d8d432,
         type: 2}
@@ -28038,9 +28019,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Starving
-  isTechtip: 0
-  isSmallBox: 1
+  tooltipText: 
+  isTechtip: 1
+  isSmallBox: 0
 --- !u!114 &1153158324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28344,8 +28325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Upgrades schools to have a playground inside, well-protected from the
-    outdoors, where the children can play and have fun when they're not studying.
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &1161441525
@@ -28504,11 +28484,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bc08feae4b833c448af4b0c535f0bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingPrefab: {fileID: 1777739490424892, guid: bf93916199d18f44abf06a3ab20849f6,
-    type: 2}
-  buildingName: Steel Refinery
-  tooltipText: The Steel Refinery produces steel over time as long as it has any active
-    workers. Requires oil to operate.
+  buildingPrefab: {fileID: 0}
+  buildingName: 
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &1162127943
@@ -28639,8 +28617,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 25.525002, y: -195}
-  m_SizeDelta: {x: 51.050003, y: 70}
+  m_AnchoredPosition: {x: 35, y: -195}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1162189526
 MonoBehaviour:
@@ -28656,8 +28634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Allows us to upgrade our Steel Refineries in order to produce more
-    steel.
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &1162189527
@@ -28761,8 +28738,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4077301cf8174ff4dad6f13b0a443beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoolDownSprite: {fileID: 21300000, guid: 979a2fa59bb632a459a9ac4a5228ac38, type: 3}
-  OriginalSprite: {fileID: 21300000, guid: 784d2475bdbe33248865dcac564dfaf4, type: 3}
+  CoolDownSprite: {fileID: 0}
+  OriginalSprite: {fileID: 0}
 --- !u!1 &1164155856
 GameObject:
   m_ObjectHideFlags: 0
@@ -29656,8 +29633,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Upgrades the clothes of the population, making them more resistant
-    to heat and sand.
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &1205758038
@@ -29841,7 +29817,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 728452619}
   m_HandleRect: {fileID: 728452618}
   m_Direction: 2
-  m_Value: 0.85293114
+  m_Value: 0.073443554
   m_Size: 0.24999996
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -30060,9 +30036,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Use 20 of Wood to gain 10 of CookedFood however the charred cabbage
-    also lowers morale, lose 5 global happiness
-  isTechtip: 0
+  tooltipText: 
+  isTechtip: 1
   isSmallBox: 0
 --- !u!114 &1209062392
 MonoBehaviour:
@@ -30076,7 +30051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a59e276aa3c65a74eb957afe5a7e242a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 1168149051}
+  obj: {fileID: 0}
 --- !u!114 &1209062393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30089,7 +30064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3580fdbee32e7054a88e907f565a9a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  em: {fileID: 814911358}
+  em: {fileID: 0}
 --- !u!114 &1209062394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30102,9 +30077,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79234e7e8fa7e41438e9509264d1fa9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 1291296551}
-  buttonText: {fileID: 1174919510}
-  output: IS THAT YOUR FINAL ANSWER?!
+  button: {fileID: 0}
+  buttonText: {fileID: 0}
+  output: 
 --- !u!114 &1209062395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30287,8 +30262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: A proper restoration of the Oil Rig allows it to operate much better.
-    Increases its productivity.
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &1214682398
@@ -30508,9 +30482,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Thirsty
-  isTechtip: 0
-  isSmallBox: 1
+  tooltipText: 
+  isTechtip: 1
+  isSmallBox: 0
 --- !u!114 &1217445901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30838,7 +30812,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1230260597
 GameObject:
@@ -30953,8 +30927,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 25.525002, y: -35}
-  m_SizeDelta: {x: 51.050003, y: 70}
+  m_AnchoredPosition: {x: 35, y: -35}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1231172308
 MonoBehaviour:
@@ -30970,7 +30944,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Better equipment allows our hunters to hunt animals more efficiently.
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &1231172309
@@ -31090,7 +31064,7 @@ GameObject:
   - component: {fileID: 1233767317}
   - component: {fileID: 1233767316}
   - component: {fileID: 1233767315}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BuildingResourceDepot
   m_TagString: BuildingResourceDepot
   m_Icon: {fileID: 0}
@@ -31259,10 +31233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingManager: {fileID: 365456831}
   tooltip: 
-  RowButtons:
-  - {fileID: 1214682395}
-  - {fileID: 1018675073}
-  - {fileID: 775273416}
+  RowButtons: []
 --- !u!114 &1236033572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31772,7 +31743,7 @@ RectTransform:
   m_AnchorMin: {x: 0.33669797, y: 0.09}
   m_AnchorMax: {x: 0.49269795, y: 0.7898022}
   m_AnchoredPosition: {x: 0, y: 0.31958008}
-  m_SizeDelta: {x: 0.38401794, y: -21.615871}
+  m_SizeDelta: {x: 0.38401794, y: -21.019989}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1265563258
 MonoBehaviour:
@@ -37196,7 +37167,7 @@ GameObject:
   - component: {fileID: 1328899131}
   m_Layer: 5
   m_Name: ButtonResourceDepot
-  m_TagString: Untagged
+  m_TagString: UIBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37236,9 +37207,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 1481842498867032, guid: 84e7b87569710f54cabfa06f1e1875da,
     type: 2}
-  buildingName: Resource Depot
-  tooltipText: A place to drop off resources. If it's full we can't produce any more
-    resources until we free some space or build a new one.
+  buildingName: Resource Deopt
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &1328899132
@@ -37662,7 +37632,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1359196327
 GameObject:
@@ -38739,8 +38709,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 25.525002, y: -115}
-  m_SizeDelta: {x: 51.050003, y: 230}
+  m_AnchoredPosition: {x: 35, y: -115}
+  m_SizeDelta: {x: 70, y: 230}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1426302476
 MonoBehaviour:
@@ -38756,10 +38726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingManager: {fileID: 365456831}
   tooltip: 
-  RowButtons:
-  - {fileID: 2036677775}
-  - {fileID: 1432294512}
-  - {fileID: 244621813}
+  RowButtons: []
   woodDropOffButton: {fileID: 927658983}
 --- !u!114 &1426302477
 MonoBehaviour:
@@ -39059,8 +39026,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 25.525002, y: -115}
-  m_SizeDelta: {x: 51.050003, y: 70}
+  m_AnchoredPosition: {x: 35, y: -115}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1432294514
 MonoBehaviour:
@@ -39076,8 +39043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Enables the Sawmill where wood is produced over time as long as workers
-    are present. Requires oil to operate.
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &1432294515
@@ -39181,8 +39147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4077301cf8174ff4dad6f13b0a443beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoolDownSprite: {fileID: 21300000, guid: 979a2fa59bb632a459a9ac4a5228ac38, type: 3}
-  OriginalSprite: {fileID: 21300000, guid: 784d2475bdbe33248865dcac564dfaf4, type: 3}
+  CoolDownSprite: {fileID: 0}
+  OriginalSprite: {fileID: 0}
 --- !u!1 &1435204657
 GameObject:
   m_ObjectHideFlags: 0
@@ -39515,8 +39481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Allows us to build bars where adults can relax. Customers' moral is
-    increased for a while after a visit to the bar.
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &1442867793
@@ -39633,7 +39598,7 @@ GameObject:
   - component: {fileID: 1446258326}
   - component: {fileID: 1446258328}
   - component: {fileID: 1446258327}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40607,7 +40572,7 @@ GameObject:
   - component: {fileID: 1505830717}
   m_Layer: 5
   m_Name: ButtonHome
-  m_TagString: Untagged
+  m_TagString: UIBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40647,8 +40612,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 1209048181683262, guid: 33b22c15d3c05c14aa1f099780eeb3ac,
     type: 2}
-  buildingName: Residence
-  tooltipText: A basic home for workers. This one accomedates 10 people.
+  buildingName: Home
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &1505830718
@@ -40960,8 +40925,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Better trained teachers allows us to have larger classes per teacher
-    from 5 pupils to 10.
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &1519891733
@@ -41219,11 +41183,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bc08feae4b833c448af4b0c535f0bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingPrefab: {fileID: 1730333365064252, guid: 31481ddc13acbcf4a84f8d40a39edbdb,
-    type: 2}
-  buildingName: Bar
-  tooltipText: A place for adults to relax after work. Increases their moral for a
-    time.
+  buildingPrefab: {fileID: 0}
+  buildingName: 
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &1526330543
@@ -41895,6 +41857,52 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1567018632}
   m_CullTransparentMesh: 0
+--- !u!1001 &1567754504
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4691660314108092, guid: 175b7fa71c41b6842a3598cee996781b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 36.546963
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691660314108092, guid: 175b7fa71c41b6842a3598cee996781b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691660314108092, guid: 175b7fa71c41b6842a3598cee996781b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 45.678715
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691660314108092, guid: 175b7fa71c41b6842a3598cee996781b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691660314108092, guid: 175b7fa71c41b6842a3598cee996781b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691660314108092, guid: 175b7fa71c41b6842a3598cee996781b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691660314108092, guid: 175b7fa71c41b6842a3598cee996781b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691660314108092, guid: 175b7fa71c41b6842a3598cee996781b, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851800495014510, guid: 175b7fa71c41b6842a3598cee996781b, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 175b7fa71c41b6842a3598cee996781b, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1575977087
 GameObject:
   m_ObjectHideFlags: 0
@@ -42085,8 +42093,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Lose 10 global happiness
-  isTechtip: 0
+  tooltipText: 
+  isTechtip: 1
   isSmallBox: 0
 --- !u!114 &1579523870
 MonoBehaviour:
@@ -42100,7 +42108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a59e276aa3c65a74eb957afe5a7e242a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 438784474}
+  obj: {fileID: 0}
 --- !u!114 &1579523871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42113,7 +42121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3580fdbee32e7054a88e907f565a9a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  em: {fileID: 814911358}
+  em: {fileID: 0}
 --- !u!114 &1579523872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42126,9 +42134,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79234e7e8fa7e41438e9509264d1fa9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 1577052101}
-  buttonText: {fileID: 507887281}
-  output: IS THAT YOUR FINAL ANSWER?!
+  button: {fileID: 0}
+  buttonText: {fileID: 0}
+  output: 
 --- !u!114 &1579523873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42498,7 +42506,7 @@ GameObject:
   - component: {fileID: 1598534573}
   m_Layer: 5
   m_Name: ButtonCanteen
-  m_TagString: Untagged
+  m_TagString: UIBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42539,8 +42547,7 @@ MonoBehaviour:
   buildingPrefab: {fileID: 1680176659257164, guid: 4566f6cb9fe701448b5054973a612e37,
     type: 2}
   buildingName: Canteen
-  tooltipText: <i>The Canteen boils and purifies water from dirty water and cooks
-    food rations from raw ingredients.</i>
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &1598534574
@@ -42985,7 +42992,7 @@ Transform:
   m_Children:
   - {fileID: 1432089686}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1619880944
 GameObject:
@@ -44184,8 +44191,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad896a5e9e61cf479d0bc1503bc7df0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 0}
-  currentResearch: {fileID: 0}
+  slider: {fileID: 1435580838}
+  currentResearch: {fileID: 429462826}
 --- !u!114 &1666136484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44198,8 +44205,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1661c6cb82b46a6469a493d246dd7cc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  container: {fileID: 994934757}
-  elements: 11
+  container: {fileID: 0}
+  elements: 0
 --- !u!114 &1666136485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44604,7 +44611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6358830e9c19432468b10c0342853e48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 1678801338}
+  button: {fileID: 0}
 --- !u!114 &1678801337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44617,9 +44624,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84459c1deacd2874f815d82f6520ae67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 301623674}
-  ps: {fileID: 301623674}
-  button: {fileID: 1678801334}
+  panel: {fileID: 0}
+  ps: {fileID: 0}
+  button: {fileID: 0}
 --- !u!114 &1678801338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45245,7 +45252,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 30}
+  m_AnchoredPosition: {x: 0, y: 30.000122}
   m_SizeDelta: {x: 175, y: 13}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1695005606
@@ -45896,11 +45903,156 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1727682928}
   m_CullTransparentMesh: 0
---- !u!1 &1737036564 stripped
+--- !u!1 &1736556647
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1136895857827536, guid: 7ffad9a52cb831540a5a0d6dc78cae93,
-    type: 2}
-  m_PrefabInternal: {fileID: 1849443214}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1736556649}
+  - component: {fileID: 1736556660}
+  - component: {fileID: 1736556655}
+  - component: {fileID: 1736556654}
+  - component: {fileID: 1736556653}
+  - component: {fileID: 1736556652}
+  - component: {fileID: 1736556651}
+  - component: {fileID: 1736556650}
+  - component: {fileID: 1736556648}
+  - component: {fileID: 1736556661}
+  m_Layer: 0
+  m_Name: GoapAndActionPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1736556648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1736556647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b96ffe1ba7616f4492bc983b2707366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newState: 
+  id: 
+--- !u!4 &1736556649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1736556647}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1736556650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1736556647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 105eaf75d647a410982d0465fcaa5372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newState: 
+  id: 
+--- !u!114 &1736556651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1736556647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5170a411238348c189a6c1a6d79ecd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newState: 
+  id: 
+--- !u!114 &1736556652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1736556647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e526cb79ca5cd4881a1f80b0bf176bfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newState: 
+  id: 
+--- !u!114 &1736556653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1736556647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e57b7086680a3de44870324733c87ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newState: 
+  id: 
+--- !u!114 &1736556654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1736556647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6844420fbf2458996b002efedf8e94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newState: 
+  id: 
+--- !u!114 &1736556655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1736556647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6863d64ad20c0e4bb4a629829c84e4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newState: 
+  id: 
+--- !u!114 &1736556660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1736556647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1cd76cf90a6cc64286a48c47c5f1dd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1736556661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1736556647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b7374b8429e7ad4d9bcc70948f921cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1742998713
 Prefab:
   m_ObjectHideFlags: 0
@@ -46155,10 +46307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingManager: {fileID: 365456831}
   tooltip: 
-  RowButtons:
-  - {fileID: 1205758035}
-  - {fileID: 133982261}
-  - {fileID: 16526918}
+  RowButtons: []
   knickknackStoreButton: {fileID: 1120748564}
 --- !u!114 &1745045523
 MonoBehaviour:
@@ -46303,8 +46452,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a3fc382473024b439d002eb7dd6dace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnSprite: {fileID: 21300000, guid: 66395559c7c55034abd226f5a642b85e, type: 3}
-  OffSprite: {fileID: 21300000, guid: 784d2475bdbe33248865dcac564dfaf4, type: 3}
+  OnSprite: {fileID: 0}
+  OffSprite: {fileID: 0}
   ShareBedsButton: {fileID: 114357706}
   CanibalismButton: {fileID: 1634678909}
   EatTrashButton: {fileID: 1511155379}
@@ -47648,7 +47797,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4747535355284834, guid: 83401204063ad8a439c4cade83c266cf, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1593124148403546, guid: 83401204063ad8a439c4cade83c266cf, type: 2}
       propertyPath: m_TagString
@@ -47663,7 +47812,7 @@ Prefab:
     - target: {fileID: 114363823076137810, guid: 83401204063ad8a439c4cade83c266cf,
         type: 2}
       propertyPath: startingPop
-      value: 25
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114363823076137810, guid: 83401204063ad8a439c4cade83c266cf,
         type: 2}
@@ -47782,7 +47931,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4503152398462204, guid: 7ffad9a52cb831540a5a0d6dc78cae93, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114456201618819216, guid: 7ffad9a52cb831540a5a0d6dc78cae93,
         type: 2}
@@ -47827,17 +47976,17 @@ Prefab:
     - target: {fileID: 114456201618819216, guid: 7ffad9a52cb831540a5a0d6dc78cae93,
         type: 2}
       propertyPath: wood
-      value: 100
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 114456201618819216, guid: 7ffad9a52cb831540a5a0d6dc78cae93,
         type: 2}
       propertyPath: steel
-      value: 100
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 114456201618819216, guid: 7ffad9a52cb831540a5a0d6dc78cae93,
         type: 2}
       propertyPath: oil
-      value: 50
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 114456201618819216, guid: 7ffad9a52cb831540a5a0d6dc78cae93,
         type: 2}
@@ -47847,22 +47996,22 @@ Prefab:
     - target: {fileID: 114456201618819216, guid: 7ffad9a52cb831540a5a0d6dc78cae93,
         type: 2}
       propertyPath: water
-      value: 80
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 114456201618819216, guid: 7ffad9a52cb831540a5a0d6dc78cae93,
         type: 2}
       propertyPath: food
-      value: 80
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 114456201618819216, guid: 7ffad9a52cb831540a5a0d6dc78cae93,
         type: 2}
       propertyPath: cleanWater
-      value: 50
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 114456201618819216, guid: 7ffad9a52cb831540a5a0d6dc78cae93,
         type: 2}
       propertyPath: cookedFood
-      value: 50
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 114456201618819216, guid: 7ffad9a52cb831540a5a0d6dc78cae93,
         type: 2}
@@ -47930,7 +48079,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1850165172
 MonoBehaviour:
@@ -49582,7 +49731,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1964545098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49595,9 +49744,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerName: 
-  LoggingActivated: 1
+  LoggingActivated: 0
   _loggingInterval: 180
-  ResourceManager: {fileID: 1737036564}
+  ResourceManager: {fileID: 1136895857827536, guid: 7ffad9a52cb831540a5a0d6dc78cae93,
+    type: 2}
 --- !u!4 &1964545099
 Transform:
   m_ObjectHideFlags: 0
@@ -49609,7 +49759,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1966389947
 GameObject:
@@ -50588,8 +50738,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 117.100006, y: -115}
-  m_SizeDelta: {x: 234.20001, y: 230}
+  m_AnchoredPosition: {x: 249.20001, y: -115}
+  m_SizeDelta: {x: 310, y: 230}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2027082832
 MonoBehaviour:
@@ -50976,8 +51126,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 25.525002, y: -35}
-  m_SizeDelta: {x: 51.050003, y: 70}
+  m_AnchoredPosition: {x: 35, y: -35}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2036677777
 MonoBehaviour:
@@ -50991,9 +51141,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bc08feae4b833c448af4b0c535f0bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingPrefab: {fileID: 0}
+  buildingPrefab: {fileID: 365456831}
   buildingName: 
-  tooltipText: Allows woodcutters to carry more.
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &2036677778
@@ -51493,7 +51643,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2069498188}
   - component: {fileID: 2069498189}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Spot Light
   m_TagString: Spotlight
   m_Icon: {fileID: 0}
@@ -51853,8 +52003,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Lose 10 Oil
-  isTechtip: 0
+  tooltipText: 
+  isTechtip: 1
   isSmallBox: 0
 --- !u!114 &2086845274
 MonoBehaviour:
@@ -51868,7 +52018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a59e276aa3c65a74eb957afe5a7e242a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 1676825494}
+  obj: {fileID: 0}
 --- !u!114 &2086845275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51881,7 +52031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3580fdbee32e7054a88e907f565a9a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  em: {fileID: 814911358}
+  em: {fileID: 0}
 --- !u!114 &2086845276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51894,9 +52044,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79234e7e8fa7e41438e9509264d1fa9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 464955495}
-  buttonText: {fileID: 1492749146}
-  output: IS THAT YOUR FINAL ANSWER?!
+  button: {fileID: 0}
+  buttonText: {fileID: 0}
+  output: 
 --- !u!114 &2086845277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52008,28 +52158,17 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 2088299133}
+  m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 365456832}
-        m_MethodName: RepairBuilding
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   HoverSoundID: 
   ClickSoundID: 
-  ResourceManager: {fileID: 1737036564}
-  PlayerInteraction: {fileID: 572603465}
-  BuildingManager: {fileID: 365456831}
+  ResourceManager: {fileID: 0}
+  PlayerInteraction: {fileID: 0}
+  BuildingManager: {fileID: 0}
   DisabledToolTip: 
 --- !u!114 &2088299133
 MonoBehaviour:
@@ -52400,8 +52539,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 25.525002, y: -195}
-  m_SizeDelta: {x: 51.050003, y: 70}
+  m_AnchoredPosition: {x: 35, y: -195}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2101842915
 MonoBehaviour:
@@ -52417,8 +52556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Allows us to upgrade our Advanced Water Wells in order to produce more
-    water.
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &2101842916
@@ -52522,8 +52660,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4077301cf8174ff4dad6f13b0a443beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoolDownSprite: {fileID: 21300000, guid: 979a2fa59bb632a459a9ac4a5228ac38, type: 3}
-  OriginalSprite: {fileID: 21300000, guid: 784d2475bdbe33248865dcac564dfaf4, type: 3}
+  CoolDownSprite: {fileID: 0}
+  OriginalSprite: {fileID: 0}
 --- !u!1001 &2103216530
 Prefab:
   m_ObjectHideFlags: 0
@@ -52609,8 +52747,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 25.525002, y: -35}
-  m_SizeDelta: {x: 51.050003, y: 70}
+  m_AnchoredPosition: {x: 35, y: -35}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2109238004
 MonoBehaviour:
@@ -52626,8 +52764,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefab: {fileID: 0}
   buildingName: 
-  tooltipText: Bigger and more ergonomic buckets allow our workers to carry more water
-    from the well.
+  tooltipText: 
   isTechtip: 1
   isSmallBox: 0
 --- !u!114 &2109238005
@@ -52772,8 +52909,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 86.575005, y: -115}
-  m_SizeDelta: {x: 51.050003, y: 230}
+  m_AnchoredPosition: {x: 115, y: -115}
+  m_SizeDelta: {x: 70, y: 230}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2110095161
 MonoBehaviour:
@@ -52789,10 +52926,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingManager: {fileID: 365456831}
   tooltip: 
-  RowButtons:
-  - {fileID: 582345506}
-  - {fileID: 869152709}
-  - {fileID: 1162189524}
+  RowButtons: []
   steelDropOffButton: {fileID: 1162127940}
 --- !u!114 &2110095162
 MonoBehaviour:
@@ -52962,8 +53096,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 76.80002, y: -96.043}
-  m_SizeDelta: {x: 143.60004, y: 34.8172}
+  m_AnchoredPosition: {x: 76.80002, y: -95.47536}
+  m_SizeDelta: {x: 143.60004, y: 34.59014}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2117791464
 MonoBehaviour:
@@ -52985,7 +53119,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.801486, b: 0, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -53679,7 +53813,7 @@ RectTransform:
   m_AnchorMin: {x: 0.65, y: 0.16}
   m_AnchorMax: {x: 0.8, y: 0.2}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -288.00006, y: -39.48388}
+  m_SizeDelta: {x: -288.00006, y: -39.2568}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2145411967
 MonoBehaviour:
@@ -53694,10 +53828,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnSprite: {fileID: 0}
   OffSprite: {fileID: 0}
-  ShareBedsButton: {fileID: 676655849}
-  CanibalismButton: {fileID: 671983425}
-  EatTrashButton: {fileID: 443856444}
-  ChildLaborButton: {fileID: 295824334}
+  ShareBedsButton: {fileID: 114357706}
+  CanibalismButton: {fileID: 1634678909}
+  EatTrashButton: {fileID: 1511155379}
+  ChildLaborButton: {fileID: 1567018632}
 --- !u!114 &2145411968
 MonoBehaviour:
   m_ObjectHideFlags: 0

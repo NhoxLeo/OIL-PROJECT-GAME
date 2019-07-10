@@ -43,9 +43,9 @@ public class Construction : MonoBehaviour {
             gameObject.GetComponent<Building>().SetConstructed(true);
             if (transform.GetComponent<BuildingResourceDepot>())
                 GameObject.Find("Buildings").GetComponent<BuildingManager>().AddResourceDepot(gameObject);
-            Destroy(buildTimeSlider);
-            LogWindow.Singleton.AddText(gameObject.GetComponent<Building>().GetName() + " constructed.");
-            Destroy(this);
+           // LogWindow.Singleton.AddText(gameObject.GetComponent<Building>().GetName() + " constructed.");
+            Destroy(this); 
+            Destroy(buildTimeSlider);               
         }
     }
 }

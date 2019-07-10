@@ -25,6 +25,10 @@ public class BuildingProduction : Building
     int interval = 0;
     int reset = 0 ;
 
+
+    protected int metalWorkerCount = 0, woodWorkerCount = 0, huntingWorkerCount = 0;
+    protected WorkSiteType currentSelectedSiteType;
+
     public new void Start()
     {
         activeWorkers = 0;
@@ -135,9 +139,17 @@ public class BuildingProduction : Building
             if (worker.GetComponent<Human>().GetAgeCategory() == HumanAgeService.AgeCategory.Child)
                 return false;
         }
-        if (workerList.Count < maxWorkers && worker != null)
+        if (workerList.Count < maxWorkers && worker != null && worker.GetComponent<Human>().HasJob == false)
         {
             workerList.Add(worker.gameObject);
+           // worker.GetComponent<Human>().OccupationBuilding = gameObject;
+            worker.GetComponent<Human>().ChangeOccupationBuilding(gameObject);
+            ManageWorkerCount(currentSelectedSiteType, + 1);
+            worker.GetComponent<Human>().SetNewHumanLocation(LocationTarget.WorkSite, workSite);
+            worker.GetComponent<Human>().OccupationBuilding = workSite;
+            Debug.Log("added worker: " + currentSelectedSiteType + " - current Count = " + ManageWorkerCount(currentSelectedSiteType, 0));
+         //   Debug.Log("Worker site info: " + worker.GetComponent<Human>().LocationService[LocationTarget.WorkSite].GetComponent<WorkSite>().SiteType.ToString());
+
             return true;
         }
         return false;
@@ -157,6 +169,7 @@ public class BuildingProduction : Building
         if (workSite == string.Empty)
         {
             tempWorker = workerList[0];
+            tempWorker.GetComponent<Human>().HasJob = false;
             workerList.Remove(workerList[0]);
         }
         else
@@ -165,7 +178,7 @@ public class BuildingProduction : Building
             {
                 workSiteType = WorkSiteType.MetalScraps;
             }
-            else if (workSite == "Forest")
+            else if (workSite == "ForestSite")
             {
                 workSiteType = WorkSiteType.Forest;
             }
@@ -178,13 +191,17 @@ public class BuildingProduction : Building
                 if (workSiteType == worker.GetComponent<Human>().LocationService[LocationTarget.WorkSite].GetComponent<WorkSite>().SiteType)
                 {
                     tempWorker = worker;
-                    workerList.Remove(worker);
+                    workerList.Remove(worker);                  
+                    tempWorker.GetComponent<Human>().HasJob = false;
+                    ManageWorkerCount(workSiteType, -1);                  
+                    Debug.Log("removed worker: " + workSite + " - current Count = " + ManageWorkerCount(workSiteType, 0));
+                    Debug.Log("Worker site info: " + worker.GetComponent<Human>().LocationService[LocationTarget.WorkSite].GetComponent<WorkSite>().SiteType.ToString());
                     break;
                 }
             }
         }
         //Sets the removed worker to have no job.
-        tempWorker.GetComponent<HumanStateMachine>().ChangeWorkState(null);
+      //  tempWorker.GetComponent<HumanStateMachine>().ChangeWorkState(null); // TEST
     }
 
     /// <summary>
@@ -225,7 +242,7 @@ public class BuildingProduction : Building
         population.GetComponent<PopulationManager>().MakeUnemployed(workerList);
         foreach (GameObject human in workerList.ToList())
         {
-            human.GetComponent<HumanStateMachine>().ChangeWorkState(null);
+        //    human.GetComponent<HumanStateMachine>().ChangeWorkState(null); //TEST
         }
         base.DestroyBuilding();
     }
@@ -247,5 +264,57 @@ public class BuildingProduction : Building
     public void ManipulateResourceMultiplier(float amount)
     {
         resourceMultiplier += amount;
+    }
+
+    protected int ManageWorkerCount(WorkSiteType site, int x)
+    {
+        switch (site)
+        {
+            case WorkSiteType.Forest:
+                return woodWorkerCount += x;
+
+            case WorkSiteType.MetalScraps:
+                return metalWorkerCount += x;
+
+            case WorkSiteType.Hunting:
+                return huntingWorkerCount += x;
+            default:
+                return 1000;
+        }
+    }
+
+    /// <summary>
+    /// Finds the closest relevant worksite and set it as its worksite.
+    /// </summary>
+    /// <param name="workSiteToFind">Work site to find.</param>
+    public void SetCurrentWorkSiteType(WorkSiteType workSiteToFind)
+    {
+        GameObject workAreas = GameObject.FindWithTag("WorkSiteAreas");
+        List<WorkSite> tempWorkSiteList = new List<WorkSite>();
+
+        float shortestDistance = float.PositiveInfinity;
+        currentSelectedSiteType = workSiteToFind;
+        foreach (Transform area in workAreas.transform)
+        {
+            WorkSite tempWorkSite = area.gameObject.GetComponent<WorkSite>();
+
+            if (tempWorkSite.SiteType == workSiteToFind)
+            {
+                tempWorkSiteList.Add(tempWorkSite);
+                if (workSite)
+                {
+                    float tempDistance = Vector3.Distance(transform.position, workSite.gameObject.transform.position);
+                    if (tempDistance < shortestDistance)
+                    {
+                        shortestDistance = tempDistance;
+                        workSite = tempWorkSite.gameObject;
+                    }
+                }
+                else
+                    workSite = tempWorkSite.gameObject;
+
+
+            }
+        }
     }
 }

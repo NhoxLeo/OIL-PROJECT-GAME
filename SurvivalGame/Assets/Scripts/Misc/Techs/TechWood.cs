@@ -28,7 +28,7 @@ public class TechWood : Tech
         case 1: //this is the case where you get a bag to carry more wood, before this upgrade the wood per person was 0.25 and now increase to 0.35
           foreach (GameObject building in buildingManager.GetComponent<BuildingManager>().GetBuildingsOfType("BuildingWoodProduction"))
             building.GetComponent<BuildingProduction>().ManipulateResourceMultiplier(0.1f);
-          UpgradeManager.WoodRate += 0.1f;
+          UpgradeManager.WoodRate += 2f;
           break;
         case 2:
           woodDropOffButton.SetActive(true);

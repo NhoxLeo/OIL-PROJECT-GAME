@@ -21,7 +21,7 @@ public class TechWater : Tech {
                 case 1:
                     foreach (GameObject building in buildingManager.GetComponent<BuildingManager>().GetBuildingsOfType("BuildingWaterProduction"))
                         building.GetComponent<BuildingProduction>().ManipulateResourceMultiplier(0.1f);
-                    UpgradeManager.WaterRate += 0.1f;
+                    UpgradeManager.WaterRate += 0.33f;
                     break;
                 case 2:
                     UpgradeManager.WaterWellAllowedUpgrade = 2;

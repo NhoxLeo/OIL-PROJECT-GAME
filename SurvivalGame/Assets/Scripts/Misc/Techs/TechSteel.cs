@@ -22,7 +22,7 @@ public class TechSteel : Tech {
                 case 1:
                     foreach (GameObject building in buildingManager.GetComponent<BuildingManager>().GetBuildingsOfType("BuildingSteelProduction"))
                         building.GetComponent<BuildingProduction>().ManipulateResourceMultiplier(0.1f);
-                    UpgradeManager.SteelRate += 0.1f;
+                    UpgradeManager.SteelRate += 2f;
                     break;
                 case 2:
                     steelDropOffButton.SetActive(true);

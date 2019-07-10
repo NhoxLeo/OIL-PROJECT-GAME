@@ -19,7 +19,7 @@ public class WorkSite : Building, IVisitable
 
   private float visitTime = 3000;
 
-  public float VisitTime { get { return visitTime; } }
+  public float VisitTime { get { return 3000; } }
 
 
   public override void Start()

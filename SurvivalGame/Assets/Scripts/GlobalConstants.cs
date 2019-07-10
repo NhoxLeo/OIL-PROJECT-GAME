@@ -10,6 +10,8 @@ public static class GlobalConstants {
     public enum Activities { WORKING, WORKINGOVERTIME, COLLECTINGWORK, RESTING, IDLE, REVOLTING, }
     public enum WorkReqs { SKILLED, UNSKILLED, NONE, }
 
+    public static bool advGoalEnabled = true;
+
     public static bool ChildLabor;
 
     // Special Rocket Variables
@@ -67,7 +69,7 @@ public static class GlobalConstants {
 
     // Temperature thresholds
     public static int thirstThreshold = 30;
-    public static float thirstDebuff = 0.02f;
+    public static float thirstDebuff = 0.1f;
     public static int comfortThreshold = 25;
     public static float comfortDebuff = 0.03f;
 

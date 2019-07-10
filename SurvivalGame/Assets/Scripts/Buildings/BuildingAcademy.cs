@@ -44,7 +44,7 @@ public class BuildingAcademy : BuildingProduction
                 if (student.EducationTime <= 0)
                 {
                     student.studentGameObj.GetComponent<Human>().SetSpecialized();
-                    student.studentGameObj.GetComponent<HumanStateMachine>().ChangeWorkState(null);
+                  //  student.studentGameObj.GetComponent<HumanStateMachine>().ChangeWorkState(null); //TEST
                     students.Remove(student);
                     break;
                 }

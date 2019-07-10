@@ -1,34 +1,39 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public enum LocationTarget
 {
-  None, // not set
-  OccupationBuilding, // The main occupation building, Scool, WorkPlace
-  WorkSite, // The WorkSite connected to a work
-  Home,
-  IdlePos, // Idle Shelter
-  RandomInteractionBuilding //Bar, Knick-Knack, Hospital ///first Check if there is an existing one.
+    None, // not set
+    OccupationBuilding, // The main occupation building, Scool, WorkPlace
+    WorkSite, // The WorkSite connected to a work
+    Home,
+    IdlePos, // Idle Shelter
+    RandomInteractionBuilding, //Bar, Knick-Knack, Hospital ///first Check if there is an existing one.
+    Canteen, // Thesis
+    Well, // Thesis
+    Idle // Thesis
 }
 
 public class HumanLocationService : Dictionary<LocationTarget, GameObject>
 {
-  public event EventHandler RandomInteractionEvent;
+    public event EventHandler RandomInteractionEvent;
 
-  public HumanLocationService()
-  {
-    //Fills the dictionary with possible locations for a human.
-    Add(LocationTarget.OccupationBuilding, null);
-    Add(LocationTarget.Home, null);
-    Add(LocationTarget.None, null);
-    Add(LocationTarget.WorkSite, null);
-    Add(LocationTarget.RandomInteractionBuilding, null);
-  }
+    public HumanLocationService()
+    {
+        //Fills the dictionary with possible locations for a human.
+        Add(LocationTarget.OccupationBuilding, null);
+        Add(LocationTarget.Home, null);
+        Add(LocationTarget.None, null);
+        Add(LocationTarget.WorkSite, null);
+        Add(LocationTarget.RandomInteractionBuilding, null);
+        Add(LocationTarget.Canteen, null); // Thesis
+        Add(LocationTarget.Well, null); // Thesis        
+        Add(LocationTarget.Idle, null); // Thesis
+    }
 
-  public void SetBuildingOfInterest(LocationTarget locationType, GameObject locationObject)
-  {
-    this[locationType] = locationObject;
-  }
+    public void SetBuildingOfInterest(LocationTarget locationType, GameObject locationObject)
+    {
+        this[locationType] = locationObject;
+    }   
 }

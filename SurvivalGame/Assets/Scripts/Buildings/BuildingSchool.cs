@@ -47,7 +47,7 @@ public class BuildingSchool : BuildingProduction
         if (pupil.EducationTime <= 0)
         {
           pupil.pupilGameObj.GetComponent<Human>().SetSkilled();
-          pupil.pupilGameObj.GetComponent<HumanStateMachine>().ChangeWorkState(null);
+          //pupil.pupilGameObj.GetComponent<HumanStateMachine>().ChangeWorkState(null); // TEST
           pupils.Remove(pupil);
           if (UpgradeManager.SchoolPlayground)
           {

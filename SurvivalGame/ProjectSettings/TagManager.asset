@@ -23,6 +23,7 @@ TagManager:
   - BuildingSpaceShip
   - Tooltip
   - BuildingAcademy
+  - UIBuilding
   layers:
   - Default
   - TransparentFX
@@ -35,7 +36,7 @@ TagManager:
   - PlacementMode
   - Units
   - ForeGround
-  - 
+  - Building
   - 
   - 
   - 

@@ -47,7 +47,7 @@ public class WorkerInformationScrollView : MonoBehaviour
         item.transform.GetChild(3).GetComponent<Text>().text = "Upper";
       else
         item.transform.GetChild(3).GetComponent<Text>().text = "Lower";
-      item.transform.GetChild(4).GetComponent<Text>().text = "null";
+      item.transform.GetChild(4).GetComponent<Text>().text = temp.GetWorkDefinition();
       item.transform.GetChild(5).GetComponent<Text>().text = "" + temp.GetThirst();
       item.transform.GetChild(6).GetComponent<Text>().text = "" + temp.GetHunger();
       if (temp.GetHome() == 100)

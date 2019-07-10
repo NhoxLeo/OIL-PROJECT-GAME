@@ -37,12 +37,12 @@ public class DebugScript : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            EventAIState.CDTimer = 98312;
+        //    EventAIState.CDTimer = 98312;
         }
         if (Input.GetKeyDown(KeyCode.T))
         {
-            EventAIState.ForceThisEvent = GameObject.Find("GameEvents").GetComponent<AddPopulationEvent>();
-            EventAIState.CDTimer = 98312;
+         //   EventAIState.ForceThisEvent = GameObject.Find("GameEvents").GetComponent<AddPopulationEvent>();
+       //     EventAIState.CDTimer = 98312;
         }
         if (Input.GetKeyDown(KeyCode.I))
         {
@@ -56,6 +56,6 @@ public class DebugScript : MonoBehaviour
                 lazyBone = GameObject.Find("Lazybone").transform.Find("CanvasLazybone").transform.Find("LazybonePanel").gameObject;
                 lazyBone.SetActive(true);
             }
-        }
+        }      
     }
 }

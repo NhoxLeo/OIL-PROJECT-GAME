@@ -1,27 +1,28 @@
-﻿using System;
-using System.Collections;
+﻿using Assets.Scripts.Humans.AIStates.HumanStates.Children;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
-using Assets.Scripts.Humans.AIStates.HumanStates.Children;
 
 public class FSM
 {
     protected GameObject FSMOwner;
     protected string prevState;
     public string currentState { get; protected set; }
+    protected GOAPMachine goap;  
 
     //protected Action stateLogicToUpdate;
-    protected StateCollection states;
+    public StateCollection states;
+    
 
     public FSM(GameObject gameObject)
     {
         FSMOwner = gameObject;
+
         states = new StateCollection();
         states.OnStateChangedEvent += HandleStateChanged;
     }
 
-    protected virtual void HandleStateChanged(object sender, StateChangedEventArgs e)
+    protected virtual void HandleStateChanged(object sender, FindNextState e)
     {
         ChangeState(e.OldState, e.NewState);
     }
@@ -37,7 +38,7 @@ public class FSM
 
         if (currentState == humanStateName)
         {
-            ChangeState(currentState, HumanStateGlobals.IDLE);
+            ChangeState(currentState, GetAIComponents.IDLE);
         }
     }
 
@@ -48,7 +49,7 @@ public class FSM
         ChangeState(stateName, stateName);
     }
 
-    protected void ChangeState(string oldState, string newState)
+    public void ChangeState(string oldState, string newState)
     {
         prevState = oldState;
         currentState = newState;
@@ -60,17 +61,22 @@ public class FSM
         if (states[currentState] != null)
         {
             states[currentState].ExecuteState();
+            if (states[currentState].IsComplete)
+            {
+                ChangeState(currentState, states[currentState].newState);
+            }
         }
-    }
+    }    
 }
 
 #region 
 public class StateCollection : Dictionary<string, AIState>
 {
-    public event EventHandler<StateChangedEventArgs> OnStateChangedEvent;
+    public event EventHandler<FindNextState> OnStateChangedEvent;
 
     public void AddState(string stateKey, AIState newState)
     {
+        //   if (newState != null) // Thesis added null check
         newState.OnExitState += HandleExitState;
         Add(stateKey, newState);
     }
@@ -80,74 +86,38 @@ public class StateCollection : Dictionary<string, AIState>
         this[state].OnExitState -= HandleExitState;
     }
 
-    void HandleExitState(object sender, StateChangedEventArgs e)
+    private void HandleExitState(object sender, FindNextState e)
     {
         //Debug.Log("Sender:  " + sender.GetType() + " Changed State: " + e.OldState + " ---> " + e.NewState);
         OnStateChangedEvent.Invoke(this, e);
         //OnStateChangedEvent(this, e);
+
     }
 }
 
-public class StateChangedEventArgs : EventArgs
+public class FindNextState : EventArgs
 {
     public string OldState { get; private set; }
     public string NewState { get; private set; }
+    GOAPMachine goap; 
 
     /// <summary>
     /// Write "Previous" as newState if you wanna make a transition to previous state.
     /// </summary>
     /// <param name="oldState"></param>
     /// <param name="newState"></param>
-    public StateChangedEventArgs(string oldState, string newState)
+    public FindNextState(string _oldState, Human _owner)
     {
-        this.OldState = oldState;
-        this.NewState = newState;
+        goap = _owner.GetComponent<GOAPMachine>();
+        OldState = _oldState;
+        NewState = goap.PlanActionSequence(_owner.GoalMachine.HumanNeeds, _owner.GoalMachine.Goals).id;                
     }
 }
 #endregion
 
-public static class HumanStateGlobals
-{
-    public static string IDLE = "IDLE";
-    public static string WORKING = "WORKING";
-    public static string WORKINGWORKSITE = "WORKINGWORKSITE";
-    public static string RESTING = "RESTING";
-    public static string SCHOOL = "SCHOOL";
-    public static string RANDOMINTERACTION = "RANDOMINTERACTION";
-
-    public static HumanAIState GetAIState(string humanState)
-    {
-        if (humanState == IDLE)
-        {
-            return new IdleState();
-        }
-        else if (humanState == WORKING)
-        {
-            return new WorkState();
-        }
-        else if (humanState == WORKINGWORKSITE)
-        {
-            return new WorkWorkSiteState();
-        }
-        else if (humanState == RESTING)
-        {
-            return new RestingState();
-        }
-        else if (humanState == SCHOOL)
-        {
-            return new SchoolState();
-        }
-        else if (humanState == RANDOMINTERACTION)
-        {
-            return new RandomInteractionState();
-        }
-        return null;
-    }
-}
-
 public class HumanFSM : FSM
 {
-    readonly Human human;
+    private Human human;
 
     public HumanFSM(GameObject gameObject) : base(gameObject)
     {
@@ -157,13 +127,15 @@ public class HumanFSM : FSM
     public HumanFSM(GameObject gameObject, string startState) : base(gameObject)
     {
         human = gameObject.GetComponent<Human>();
-        human.SuddenNeedEvent += HandleSuddenHumanNeed;
-    }
+        human.SuddenNeedEvent += HandleSuddenHumanNeed;      
+        goap = human.GetComponent<GOAPMachine>();          
+      //  goap.PlanActionSequence(human.GoalMachine.HumanNeeds, human.GoalMachine.Goals);
+    }   
 
-    protected override void HandleStateChanged(object sender, StateChangedEventArgs e)
+    protected override void HandleStateChanged(object sender, FindNextState e)
     {
         //if the state before the Exit was a RandomInteraction (was at bar, knick-knack etc)
-        if (e.OldState == HumanStateGlobals.RANDOMINTERACTION)
+        if (e.OldState == GetAIComponents.RANDOMINTERACTION)
         {
             //Change from randomInteraction to do what the human was doing before.
             ChangeState(e.OldState, prevState);
@@ -174,34 +146,34 @@ public class HumanFSM : FSM
 
     private void HandleSuddenHumanNeed(object sender, EventArgs e)
     {
-        if (currentState != HumanStateGlobals.RANDOMINTERACTION)
+        if (currentState != GetAIComponents.RANDOMINTERACTION)
         {
-            states[currentState].Exit(HumanStateGlobals.RANDOMINTERACTION);
+            states[currentState].Exit(GetAIComponents.RANDOMINTERACTION);
         }
     }
 
     public void ChangeOccupationStatus(GameObject productionBuildingObj)
     {
-        var workplace = productionBuildingObj;
+        GameObject workplace = productionBuildingObj;
 
         if (human.GetComfort() > 0 && workplace)
         {
             human.SetNewHumanLocation(LocationTarget.OccupationBuilding, workplace);
             if (human.GetAgeCategory() == HumanAgeService.AgeCategory.Adult)
             {
-                states[currentState].Exit(HumanStateGlobals.WORKING);
+                states[currentState].Exit(GetAIComponents.WORKING);
                 human.HasJob = true;
             }
             else if (GlobalConstants.ChildLabor)
             {
-                states[currentState].Exit(HumanStateGlobals.WORKING);
+                states[currentState].Exit(GetAIComponents.WORKING);
                 human.HasJob = true;
             }
             else if (!GlobalConstants.ChildLabor && human.GetAgeCategory() == HumanAgeService.AgeCategory.Child)
             {
                 if (workplace.tag == ("BuildingProductionSchool"))
                 {
-                    states[currentState].Exit(HumanStateGlobals.SCHOOL);
+                    states[currentState].Exit(GetAIComponents.SCHOOL);
                     human.HasJob = true;
                 }
             }
@@ -209,10 +181,11 @@ public class HumanFSM : FSM
         }
         else if (!workplace)
         {
-            states[currentState].Exit(HumanStateGlobals.IDLE);
+            states[currentState].Exit(GetAIComponents.IDLE);
             human.HasJob = false;
         }
     }
 }
+
 
 

@@ -1,130 +1,113 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Timers;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class WorkWorkSiteState : HumanAIState
 {
-  protected bool clockedInToWork;
-  protected bool canWorkOverTime;
-  protected bool workingOvertime;
-  protected bool workTimeFinished;
-  readonly Timer workTimer = new Timer();
+    protected bool clockedInToWork;
+    protected bool canWorkOverTime;
+    protected bool workingOvertime;
+    protected bool workTimeFinished;
 
-  public override void Enter(GameObject owner, string enteringState)
-  {
-    base.Enter(owner, enteringState);
+    // private readonly Timer workTimer = new Timer();
+    private readonly float interval = 3;
+    private readonly int reset = 0;
+    private float timer;
+    bool seqStarted;
 
-    //_humanScript.ChangeMultiplierValue(HumanNeedMulitplierType.Comfort);
-
-    ChangeTargetLocation(LocationTarget.WorkSite);
-    PrepareMove(_humanScript.LocationService[CurrentLocationTarget].transform.position);
-  }
-
-  public override void ExecuteState()
-  {
-    base.ExecuteState();
-
-    if (workTimeFinished)
-    {//Work is now finished and the agent will move towards the delivery point.
-      ChangeTargetLocation(LocationTarget.OccupationBuilding);
-      PrepareMove(_humanScript.LocationService[CurrentLocationTarget].transform.position);
-      workTimeFinished = false;
-    }
-
-    if (workingOvertime)
+    private void Start()
     {
-      OverTimeExitConditions();
+        prereqs = new Dictionary<string, bool>();
+        outcomes = new Dictionary<string, bool>();
+        id = "WORKINGWORKSITE";
+        prereqs.Add("occupation", true);
+        outcomes.Add("isGathering", true);
     }
-    else
+
+    public override void Enter(GameObject owner, string enteringState)
+    {      
+        base.Enter(owner, enteringState);
+
+        _humanScript.IsResting = false;
+        _humanScript.ChangeMultiplierValue(HumanNeedMulitplierType.Comfort, false);              
+
+        move.NewDestination(LocationTarget.WorkSite);
+        move.TryMove(_humanScript.LocationService[LocationTarget.OccupationBuilding].GetComponent<BuildingProduction>().workSite.transform.position);
+     
+    }
+
+    public override void ExecuteState()
+    {      
+        base.ExecuteState();      
+
+        //Work is now finished and the agent will move towards the delivery point.   
+        if (workTimeFinished)
+        {     
+            CurrentLocationTarget = LocationTarget.OccupationBuilding;
+            move.NewDestination(LocationTarget.OccupationBuilding);
+            move.TryMove(_humanScript.LocationService[CurrentLocationTarget].transform.position);
+
+            workTimeFinished = false;
+        }      
+    }
+
+    protected override void DoReachedTargetLogic()
     {
-      NormalExitConditions();
-    }
-  }
+        seqStarted = true;
+        //    Human _humanScript = gameObject.GetComponent<Human>();
+        if (CurrentLocationTarget == LocationTarget.OccupationBuilding)
+        {
+            _humanScript.LocationService[CurrentLocationTarget].GetComponent<IVisitable>().HandleVisitor(_owner);           
+            CurrentLocationTarget = LocationTarget.WorkSite;
+            move.NewDestination(LocationTarget.WorkSite);
+            move.TryMove(_humanScript.LocationService[CurrentLocationTarget].transform.position);
+            if (seqStarted)
+            {
+                seqStarted = false;
+                _humanScript.ForceGoalEvalTarget();
+            }         
+        }
+        else if (CurrentLocationTarget == LocationTarget.WorkSite)
+        {
+            if (!clockedInToWork)
+            {
+                CheckInToWork(_humanScript);
+            }
 
-  protected override void DoReachedTargetLogic()
-  {
-    if (CurrentLocationTarget == LocationTarget.OccupationBuilding)
+            move.TryHaltAndHide();
+
+          
+            timer += Time.deltaTime;
+            if (timer >= interval)
+            {
+                timer = reset;
+                workTimeFinished = true;
+            }
+        }
+    }  
+   
+
+    public override void Exit(string newState)
     {
-      _humanScript.LocationService[CurrentLocationTarget].GetComponent<IVisitable>().HandleVisitor(_owner);
-      ChangeTargetLocation(LocationTarget.WorkSite);
-      PrepareMove(_humanScript.LocationService[CurrentLocationTarget].transform.position);
+        //     Human _humanScript = gameObject.GetComponent<Human>();
+        base.Exit(newState);
+        CheckoutFromWork(_humanScript);
     }
-    else if (CurrentLocationTarget == LocationTarget.WorkSite)
+
+    private void CheckoutFromWork(Human _humanScript)
     {
-      if (!clockedInToWork)
-      {
-        CheckInToWork();
-      }
+        if (clockedInToWork)
+        {
+            _humanScript.LocationService[LocationTarget.OccupationBuilding].GetComponent<BuildingProduction>().CheckOutWorker();
+            clockedInToWork = false;
+        }
 
-      Halt();
-
-      workTimer.Interval = _humanScript.LocationService[CurrentLocationTarget].GetComponent<IVisitable>().VisitTime;
-      workTimeFinished = false;
-      workTimer.Start();
-
-      workTimer.Elapsed += delegate
-      {
-        workTimeFinished = true;
-        workTimer.Stop();
-      };
     }
-  }
 
-  void NormalExitConditions()
-  {
-    //Exit conditions
-    if (_humanScript.GetComfort() <= 0f)
+    private void CheckInToWork(Human _humanScript)
     {
-      if (canWorkOverTime)
-      {
-        workingOvertime = true;
-      }
-      else
-      {
-        CheckoutFromWork();
-        Exit(HumanStateGlobals.RESTING);
-      }
+        _humanScript.LocationService[LocationTarget.OccupationBuilding].GetComponent<BuildingProduction>().CheckInWorker();
+        clockedInToWork = true;
     }
-  }
-
-  void OverTimeExitConditions()
-  {
-    //Exit conditions
-    if (_humanScript.GetComfort() < -75)
-    {
-      CheckoutFromWork();
-
-      if (_humanScript.LocationService[LocationTarget.Home])
-      {
-        Exit(HumanStateGlobals.RESTING);
-      }
-      else
-        Exit(HumanStateGlobals.IDLE);
-    }
-  }
-
-  public override void Exit(string newState)
-  {
-    base.Exit(newState);
-    CheckoutFromWork();
-  }
-
-  private void CheckoutFromWork()
-  {
-    if (clockedInToWork)
-    {
-      _humanScript.LocationService[LocationTarget.OccupationBuilding].GetComponent<BuildingProduction>().CheckOutWorker();
-      clockedInToWork = false;
-    }
-
-  }
-
-  private void CheckInToWork()
-  {
-    _humanScript.LocationService[LocationTarget.OccupationBuilding].GetComponent<BuildingProduction>().CheckInWorker();
-    clockedInToWork = true;
-  }
 
 
 }

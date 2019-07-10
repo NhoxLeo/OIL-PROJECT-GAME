@@ -39,37 +39,37 @@ public class EventManager : MonoBehaviour
     ResourceManager resMan;
     Transform man;
 
-    public EventFSM fsm;
+   // public EventFSM fsm;
     Button notificationButton;
 
     int autoChoice;
 
     void Awake()
     {
-        eventObjects = GameObject.Find("GameEvents").gameObject;
+       // eventObjects = GameObject.Find("GameEvents").gameObject;
 
-        fsm = new EventFSM(gameObject, EventStateGlobals.COOLDOWN);
-        AddState(EventStateGlobals.EVALUATE);
-        AddState(EventStateGlobals.SELECT);
-        AddState(EventStateGlobals.APPLY);
-        AddStartState(EventStateGlobals.COOLDOWN);
-        popMan = GameObject.Find("Population").gameObject;
-        resMan = GameObject.Find("ResourceManager").GetComponent<ResourceManager>();
-        buttonATooltip = choiceA.GetComponent<MouseOverListener>();
-        buttonBTooltip = choiceB.GetComponent<MouseOverListener>();
-        buttonCTooltip = choiceC.GetComponent<MouseOverListener>();
-        notificationToolTip = notificationButtonObj.GetComponent<MouseOverListener>();
-        notificationButton = notificationButtonObj.GetComponent<Button>();
-        gameEvents = eventObjects.GetComponents<AGameEvent>();
+       // fsm = new EventFSM(gameObject, EventStateGlobals.COOLDOWN);
+       // AddState(EventStateGlobals.EVALUATE);
+       // AddState(EventStateGlobals.SELECT);
+       // AddState(EventStateGlobals.APPLY);
+        //AddStartState(EventStateGlobals.COOLDOWN);
+       // popMan = GameObject.Find("Population").gameObject;
+      //  resMan = GameObject.Find("ResourceManager").GetComponent<ResourceManager>();
+        //buttonATooltip = choiceA.GetComponent<MouseOverListener>();
+       // buttonBTooltip = choiceB.GetComponent<MouseOverListener>();
+       // buttonCTooltip = choiceC.GetComponent<MouseOverListener>();
+      //  notificationToolTip = notificationButtonObj.GetComponent<MouseOverListener>();
+     //   notificationButton = notificationButtonObj.GetComponent<Button>();
+     //   gameEvents = eventObjects.GetComponents<AGameEvent>();
 
     }
-    private void AddStartState(string eventStartState)
-    {
-        fsm.AddStartState(eventStartState, EventStateGlobals.GetAIState(eventStartState));
-    }
+    //private void AddStartState(string eventStartState)
+    //{
+    //    fsm.AddStartState(eventStartState, EventStateGlobals.GetAIState(eventStartState));
+    //}
     public void AddState(string eventState)
     {
-        fsm.AddState(eventState, EventStateGlobals.GetAIState(eventState));
+      //  fsm.AddState(eventState, EventStateGlobals.GetAIState(eventState));
     }
 
     void Update()
@@ -84,9 +84,9 @@ public class EventManager : MonoBehaviour
     }
     void UpdateEventFSM()
     {
-        if (fsm != null && !isForcingEvent)
+     //   if (fsm != null && !isForcingEvent)
         {
-            fsm.FSMUpdate();
+       //     fsm.FSMUpdate();
         }
     }
     void UpdateEvents()

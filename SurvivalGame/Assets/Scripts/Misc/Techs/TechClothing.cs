@@ -17,10 +17,10 @@ public class TechClothing : Tech {
         if (success) {
             switch (level) {
                 case 1:
-                    GameObject.Find("Population").GetComponent<PopulationManager>().UpgradeClothing(0.05f);
+                    GameObject.Find("Population").GetComponent<PopulationManager>().UpgradeClothing(0.5f);
                     break;
                 case 2:
-                    GameObject.Find("Population").GetComponent<PopulationManager>().UpgradeShoes(0.1f);
+                    GameObject.Find("Population").GetComponent<PopulationManager>().UpgradeShoes(0.3f);
                     break;
                 case 3:
                     knickknackStoreButton.SetActive(true);

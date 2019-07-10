@@ -29,10 +29,10 @@ public static class UpgradeManager {
     // Technology buffs
     public static bool schoolPlayground = false;
     public static float waterRate = 0.25f;
-    public static float woodRate = 4f;
-    public static float steelRate = 4f;
+    public static float woodRate = 1f;
+    public static float steelRate = 1f;
     public static float canteenRate = 0.33f;
-    public static float huntingRate = 3f;
+    public static float huntingRate = 2f;
 
     // Properties
     public static int SawmillAllowedUpgrade { get { return sawmillAllowedUpgrade; } set { sawmillAllowedUpgrade = value; } }
